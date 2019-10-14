@@ -21,10 +21,16 @@ for line in currentFile:
     columns[0] = columns[0][1:-1]
     columns[1] = columns[1].rstrip()
     if columns[0].isdigit():
-        if "000" not in columns[0]:
+        doAdd = True
+        a,b,c,d,e = columns[0]
+
+        if c == "0" and d == "0" and e == "0":
+            doAdd = False
+
+        if doAdd:
             areaTitleDict[columns[0]] = columns[1].rstrip('"')
+
 currentFile.close()
-print(len(areaTitleDict))
 
 dataPath = sys.argv[1] + "/2018.annual.singlefile.csv"
 currentFile = open(dataPath)
@@ -34,7 +40,7 @@ results = [0, 0, "", 0, 0, "", 0, 0, "", 0, 0, 0, "", 0, 0, "", 0, 0, "", 0]
 for line in currentFile:
     columns = line.split(",")
 
-    if  areaTitleDict.__contains__(columns[0][1:-1]):
+    if areaTitleDict.__contains__(columns[0][1:-1]):
         if (columns[1].strip('"')).rstrip() == "0" and (columns[2].strip('"')).rstrip() == "10":
             results[0] += 1
             results[1] += int(columns[10])

@@ -1,3 +1,7 @@
 10/12/2019:
 I got the program up and working perfectly for UT and DC but it has a few faults in my dictionary so that a wrong output
-is displayed for USA_full. will work on issue after committing first version
+is displayed for USA_full. will work on issue after committing first version.
+
+10/14/2019:
+I got the program working for the full solution (USA_full / 2018.annual.singlefile.csv) which it is able to do in 13.038
+seconds! I will be working on the comments and other minor details after committing this version.
