@@ -4,4 +4,7 @@ is displayed for USA_full. will work on issue after committing first version.
 
 10/14/2019:
 I got the program working for the full solution (USA_full / 2018.annual.singlefile.csv) which it is able to do in 13.038
-seconds! I will be working on the comments and other minor details after committing this version.
+seconds! I will be working on the comments and other minor details after committing this version. The issue I was
+encountering was that my dictionary would remove anything that had the sequence of "000" ANYWHERE in the fips code. To
+fix this issue I made it cast its individual characters to seperate variables and only checked the last 3 of the 5
+fips characters for the sequence "000". I also finished the comments and other minor details
